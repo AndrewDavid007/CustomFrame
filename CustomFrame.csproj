@@ -48,6 +48,9 @@
 	  <None Update="cficon.png">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
+		<None Update="Simple.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
 	  <None Update="Lines.png">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
