@@ -3,6 +3,7 @@ using System.Reflection;
 using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
 using System.Security;
 using System.Security.Permissions;
 
@@ -18,3 +19,4 @@ using System.Security.Permissions;
 [assembly: AssemblyFileVersion("1.5.0.0")]
 [assembly: NeutralResourcesLanguage("en-GB")]
 [assembly: AssemblyVersion("1.5.0.0")]
+[assembly: SupportedOSPlatform("Windows")]

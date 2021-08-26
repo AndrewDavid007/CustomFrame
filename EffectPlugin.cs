@@ -2,6 +2,7 @@
 using System.IO;
 using CustomFrame.Properties;
 using PaintDotNet;
+using PaintDotNet.AppModel;
 using PaintDotNet.Effects;
 
 namespace CustomFrame
@@ -19,7 +20,7 @@ namespace CustomFrame
         public static string StaticSubMenuName => SubmenuNames.Render;
 
         public EffectPlugin()
-            : base(StaticName, StaticIcon, StaticSubMenuName, EffectFlags.Configurable)
+            : base(StaticName, StaticIcon, StaticSubMenuName, new EffectOptions { Flags = EffectFlags.Configurable })
         {
         }
 
@@ -68,7 +69,8 @@ namespace CustomFrame
         protected override void OnSetRenderInfo(EffectConfigToken parameters, RenderArgs dstArgs, RenderArgs srcArgs)
         {
             FrameConfigToken frameConfigToken = (FrameConfigToken)parameters;
-            string text = Path.Combine(PdnInfo.UserDataPath, "Custom Frames");
+            string userFilesPath = this.Services.GetService<IUserFilesService>().UserFilesPath;
+            string text = Path.Combine(userFilesPath, "Custom Frames");
             if (!Directory.Exists(text))
             {
                 Directory.CreateDirectory(text);
