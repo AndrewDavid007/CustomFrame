@@ -3,6 +3,8 @@ using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
 using CustomFrame.Properties;
+using PaintDotNet;
+using PaintDotNet.AppModel;
 using PaintDotNet.Effects;
 
 namespace CustomFrame
@@ -132,7 +134,8 @@ namespace CustomFrame
 
         private void SelectFrame_Load(object sender, EventArgs e)
         {
-            thepath = Path.Combine(PdnInfo.UserDataPath, "Custom Frames");
+            string userFilesPath = this.Services.GetService<IUserFilesService>().UserFilesPath;
+            thepath = Path.Combine(userFilesPath, "Custom Frames");
             if (!Directory.Exists(thepath))
             {
                 Directory.CreateDirectory(thepath);
