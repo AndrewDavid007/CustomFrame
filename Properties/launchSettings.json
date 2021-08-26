@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CustomFrame": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\paint.net\\paintdotnet.exe",
+      "workingDirectory": "C:\\Program Files\\paint.net",
+      "nativeDebugging": true
+    }
+  }
+}
