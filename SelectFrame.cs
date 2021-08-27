@@ -11,7 +11,7 @@ namespace CustomFrame
 {
     public class SelectFrame : EffectConfigDialog
     {
-        private IContainer components;
+        private readonly IContainer components;
 
         private ComboBox comboBox1;
 
@@ -54,7 +54,7 @@ namespace CustomFrame
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new System.Drawing.Size(260, 21);
             comboBox1.TabIndex = 1;
-            comboBox1.SelectedIndexChanged += new System.EventHandler(frameBox_SelectedIndexChanged);
+            comboBox1.SelectedIndexChanged += new System.EventHandler(FrameBox_SelectedIndexChanged);
             button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             button1.Location = new System.Drawing.Point(62, 147);
             button1.Name = "button1";
@@ -62,7 +62,7 @@ namespace CustomFrame
             button1.TabIndex = 2;
             button1.Text = "OK";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += new System.EventHandler(button1_Click);
+            button1.Click += new System.EventHandler(Button1_Click);
             button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             button2.Location = new System.Drawing.Point(143, 147);
             button2.Name = "button2";
@@ -70,7 +70,7 @@ namespace CustomFrame
             button2.TabIndex = 3;
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += new System.EventHandler(button2_Click);
+            button2.Click += new System.EventHandler(Button2_Click);
             groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             groupBox1.Controls.Add(trackBar1);
             groupBox1.Controls.Add(comboBox2);
@@ -88,7 +88,7 @@ namespace CustomFrame
             trackBar1.TabIndex = 1;
             trackBar1.TickFrequency = 255;
             trackBar1.Value = 255;
-            trackBar1.Scroll += new System.EventHandler(opacitySlide_Scroll);
+            trackBar1.Scroll += new System.EventHandler(OpacitySlide_Scroll);
             comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             comboBox2.FormattingEnabled = true;
@@ -101,7 +101,7 @@ namespace CustomFrame
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new System.Drawing.Size(248, 21);
             comboBox2.TabIndex = 0;
-            comboBox2.SelectedIndexChanged += new System.EventHandler(bmBox_SelectedIndexChanged);
+            comboBox2.SelectedIndexChanged += new System.EventHandler(BmBox_SelectedIndexChanged);
             base.AutoScaleDimensions = new System.Drawing.SizeF(6f, 13f);
             base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             base.ClientSize = new System.Drawing.Size(284, 179);
@@ -166,29 +166,29 @@ namespace CustomFrame
             frameConfigToken.Opacity = trackBar1.Value;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             base.DialogResult = DialogResult.OK;
             FinishTokenUpdate();
             Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void frameBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void FrameBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             FinishTokenUpdate();
         }
 
-        private void bmBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void BmBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             FinishTokenUpdate();
         }
 
-        private void opacitySlide_Scroll(object sender, EventArgs e)
+        private void OpacitySlide_Scroll(object sender, EventArgs e)
         {
             FinishTokenUpdate();
         }
