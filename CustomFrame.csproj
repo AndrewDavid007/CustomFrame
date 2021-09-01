@@ -30,13 +30,13 @@
 			<HintPath>C:\Program Files\paint.net\PaintDotNet.Resources.dll</HintPath>
 		</Reference>
 		<Reference Include="System.Drawing.Common">
-		  <HintPath>..\..\..\..\..\Program Files\paint.net\System.Drawing.Common.dll</HintPath>
+		  <HintPath>C:\Program Files\paint.net\System.Drawing.Common.dll</HintPath>
 		</Reference>
 		<Reference Include="System.Windows.Forms">
-		  <HintPath>..\..\..\..\..\Program Files\paint.net\System.Windows.Forms.dll</HintPath>
+		  <HintPath>C:\Program Files\paint.net\System.Windows.Forms.dll</HintPath>
 		</Reference>
 		<Reference Include="System.Windows.Forms.Primitives">
-		  <HintPath>..\..\..\..\..\Program Files\paint.net\System.Windows.Forms.Primitives.dll</HintPath>
+		  <HintPath>C:\Program Files\paint.net\System.Windows.Forms.Primitives.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
